@@ -1,9 +1,9 @@
-## Interpreter for Monty ByteCode files
+# Interpreter for Monty ByteCode files
 
 > Monty ByteCode contains opcodes specific to Monty. This is an interpreter for
 > these special opcodes: `push`, `pall`, `pint`, `pop`, `swap`, `swap`, `add`, `nop`
 
-### Description of repo contents
+## Description of repo contents
 
 * bytecode folder ----- holds Monty ByteCode files
 * monty.h ------------- holds all function prototypes for interpreter
@@ -23,4 +23,4 @@ $ ./monty bytecodes/000.m
 ## Author
 
 * **Bright Odohofre** - [Odohofre](https://github.com/Odohofre)
-* **Loveth Okebe**
+* **Loveth Okebe** - [Loveth10](https://github.com/Loveth10)
