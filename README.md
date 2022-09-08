@@ -18,7 +18,7 @@ git clone https://github.com/Odohofre/monty
 cd monty
 gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 $ ./monty bytecodes/000.m
-
+```
 
 ## Author
 
