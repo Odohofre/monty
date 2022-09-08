@@ -11,7 +11,7 @@ void pall(stack_t **h, unsigned int line_number)
 	if (!h || !*h)
 		return;
 
-	(void) line_number;
+	(void)line_number;
 	tmp = *h;
 	while (tmp != NULL)
 	{
@@ -33,7 +33,6 @@ void pint(stack_t **h, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*h)->n);
-
 }
 
 /**
@@ -55,7 +54,6 @@ void pchar(stack_t **h, unsigned int line_number)
 		printf("L%u: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
 }
 
 /**
@@ -75,7 +73,7 @@ void pstr(stack_t **h, unsigned int line_number)
 	}
 	tmp = *h;
 	while ((tmp != NULL) && (tmp->n != 0) &&
-	       (tmp->n >= 0) && (tmp->n <= 127))
+		   (tmp->n >= 0) && (tmp->n <= 127))
 	{
 		printf("%c", (tmp)->n);
 		tmp = tmp->next;
@@ -90,6 +88,6 @@ void pstr(stack_t **h, unsigned int line_number)
  */
 void nop(stack_t **h, unsigned int line_number)
 {
-	(void) h;
-	(void) line_number;
+	(void)h;
+	(void)line_number;
 }

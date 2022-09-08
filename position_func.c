@@ -6,27 +6,27 @@
  */
 void swap(stack_t **h, unsigned int line_number)
 {
-  stack_t *tmp = NULL;
+	stack_t *tmp = NULL;
 
-  if (*h == NULL || (*h)->next == NULL)
-  {
-    printf("L%u: can't swap, stack too short\n", line_number);
-    exit(EXIT_FAILURE);
-  }
-  tmp = (*h)->next;
-  if (tmp->next != NULL)
-  {
-    (*h)->next = tmp->next;
-    (*h)->next->prev = *h;
-  }
-  else
-  {
-    tmp->prev->prev = tmp;
-    tmp->prev->next = NULL;
-  }
-  tmp->prev = NULL;
-  tmp->next = *h;
-  (*h) = tmp;
+	if (*h == NULL || (*h)->next == NULL)
+	{
+		printf("L%u: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	tmp = (*h)->next;
+	if (tmp->next != NULL)
+	{
+		(*h)->next = tmp->next;
+		(*h)->next->prev = *h;
+	}
+	else
+	{
+		tmp->prev->prev = tmp;
+		tmp->prev->next = NULL;
+	}
+	tmp->prev = NULL;
+	tmp->next = *h;
+	(*h) = tmp;
 }
 
 /**
@@ -36,21 +36,21 @@ void swap(stack_t **h, unsigned int line_number)
  */
 void rotl(stack_t **h, unsigned int line_number)
 {
-  stack_t *tmp;
+	stack_t *tmp;
 
-  (void)line_number;
+	(void)line_number;
 
-  if ((*h)->next != NULL)
-  {
-    tmp = *h;
-    while (tmp->next != NULL)
-      tmp = tmp->next;
-    (*h)->prev = tmp;
-    tmp->next = *h;
-    (*h)->next->prev = NULL;
-    *h = (*h)->next;
-    tmp->next->next = NULL;
-  }
+	if ((*h)->next != NULL)
+	{
+		tmp = *h;
+		while (tmp->next != NULL)
+			tmp = tmp->next;
+		(*h)->prev = tmp;
+		tmp->next = *h;
+		(*h)->next->prev = NULL;
+		*h = (*h)->next;
+		tmp->next->next = NULL;
+	}
 }
 
 /**
@@ -60,19 +60,19 @@ void rotl(stack_t **h, unsigned int line_number)
  */
 void rotr(stack_t **h, unsigned int line_number)
 {
-  stack_t *tmp;
+	stack_t *tmp;
 
-  (void)line_number;
+	(void)line_number;
 
-  if ((*h)->next != NULL)
-  {
-    tmp = *h;
-    while (tmp->next != NULL)
-      tmp = tmp->next;
-    (*h)->prev = tmp;
-    tmp->next = *h;
-    tmp->prev->next = NULL;
-    tmp->prev = NULL;
-    (*h) = (*h)->prev;
-  }
+	if ((*h)->next != NULL)
+	{
+		tmp = *h;
+		while (tmp->next != NULL)
+			tmp = tmp->next;
+		(*h)->prev = tmp;
+		tmp->next = *h;
+		tmp->prev->next = NULL;
+		tmp->prev = NULL;
+		(*h) = (*h)->prev;
+	}
 }

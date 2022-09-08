@@ -22,8 +22,7 @@ void (*get_op_func(char *token1))(stack_t **stack, unsigned int line_number)
 		{"nop", nop},
 		{"rotl", rotl},
 		{"rotr", rotr},
-		{NULL, NULL}
-	};
+		{NULL, NULL}};
 	int i = 0;
 
 	while (instruction_s[i].f != NULL)
